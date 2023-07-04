@@ -157,7 +157,7 @@
 
         function telegramAlert(typesport, choseteam, ch_date, chosestadium) {
             var title = "Soccer voter";
-            var list = `<b>\n ${title} </b><b>\n- ប្រភេទកីឡា : </b>${typesport} <b>\n- ប៉ះក្រុម : </b>${choseteam} <b>\n- ថ្ងៃ : </b>${ch_date} <b>\n- ទីលាន : </b>${chosestadium}\n`;
+            var list = `<b>\n ${title} </b> <b>\n- ប្រភេទកីឡា : </b>${typesport} <b>\n- ប៉ះក្រុម : </b>${choseteam} <b>\n- ថ្ងៃ : </b>${ch_date} <b>\n- ទីលាន : </b>${chosestadium}\n`;
             $.ajax({
                 type: 'POST',
                 url: `https://api.telegram.org/bot${token}/sendMessage`,
