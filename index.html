@@ -169,7 +169,7 @@
                 success: function(data) {
                     successmessage = 'Your voted was succesfully ';
                      $("#successmessage").text(successmessage);
-                   document.getElementById("cform").reset();
+                   window.location.reload();
                 },
                 error: function(data) {             
                     successmessage = 'Error';
