@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>List name all player</title>
+</head>
+
+<body>
+    <div class="container py-4 me-0">
+        <div class="row">
+            <!-- <form> -->
+            <div class="col-12 col-md-6 col-sm-6">
+                <h2 class="text-center text-success" style="text-transform: uppercase;">please vote for available
+                    match
+                </h2>
+                <!-- <form class="was-validated"> -->
+                <div class="row align-items-center mt-5">
+                    <label class="form-label required" style="font-weight: bold;">Select Sport <span
+                            class="text-danger">*</span></label>
+                    <select class="form-select" name="typeSport" id="typeSport" form="sportForm">
+                        <option value="" disabled selected>----""----</option>
+                        <option value="Football">Football</option>
+                        <option value="Volleyball">Volleyball</option>
+                    </select>
+                </div>
+                <div class="row align-items-center mt-4">
+                    <label class="form-label" style="font-weight: bold;">Select Team <span
+                            class="text-danger">*</span></label>
+                    <select class="form-select required" name="choseTeam" id="choseTeam" form="teamForm">
+                        <option value="" disabled selected>----""----</option>
+                        <option value="DMC">DMC</option>
+                        <option value="DBA">DBA</option>
+                        <option value="Emmzrem">Emmzrem(IB)</option>
+                        <option value="T24">T24</option>
+                        <option value="ខ្យង">ខ្យង</option>
+                    </select>
+                </div>
+                <div class=" mt-4">
+                    <label class="form-label" style="font-weight: bold;">Choose Date <span
+                            class="text-danger">*</span></label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="datePlay" type="checkbox" id="monday" value="Monday">
+                        <label class="form-check-label" for="monday">Monday</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="datePlay" type="checkbox" id="tuesday" value="Tuesday">
+                        <label class="form-check-label" for="tuesday">Tuesday</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="datePlay" type="checkbox" id="wednesday"
+                            value="Wednesday">
+                        <label class="form-check-label" for="wednesday">Wednesday</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="datePlay" type="checkbox" id="thursday" value="Thursday">
+                        <label class="form-check-label" for="thursday">Thursday</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="datePlay" type="checkbox" id="friday" value="Friday">
+                        <label class="form-check-label" for="friday">Friday</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+
+                        <input class="form-check-input" name="datePlay" type="checkbox" id="saturday" value="Saturday">
+                        <label class="form-check-label" for="saturday">Saturday</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="datePlay" type="checkbox" id="sunday" value="Sunday">
+                        <label class="form-check-label" for="sunday">Sunday</label>
+                    </div>
+                </div>
+                <div class="row align-items-center mt-4">
+                    <label class="form-label" style="font-weight: bold;">Select Stadium <span
+                            class="text-danger">*</span></label>
+                    <select class="form-select required" name="choseStadium" id="choseStadium" form="stadiumForm">
+                        <option value="" disabled selected>----""----</option>
+                        <option value="ជ្រោយចង្វារ">ជ្រោយចង្វារ(សាលារៀន)</option>
+                        <option value="Khemara">Khemara sport</option>
+                        <option value="Platinum">Platinum sport club</option>
+                        <option value="Eden">Eden</option>
+                    </select>
+                </div>
+                <!-- </form> -->
+                <hr>
+                <div class="row align-items-center mt-4">
+                    <button type="submit" id="btnSubmit" class="btn btn-success" onclick="add()">Submit</button>
+                    <a class="btn btn-outline-danger mt-3" href="index.html" role="button">Clear</a>
+                </div>
+
+            </div>
+            <!-- </form> -->
+        </div>
+    </div>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        // const button = document.querySelector('#btnSubmit');
+        // button.addEventListener('click', (event) => {
+        //     let checkboxes = document.querySelectorAll('input[name="datePlay"]:checked');
+        //     let selectDate = [];
+        //     checkboxes.forEach((checkbox) => {
+        //         selectDate.push(checkbox.value);
+        //     });
+        //     // document.write("You have selected ", output);
+        // });
+
+
+
+
+        // function updateType() {
+        //     var select = document.getElementById('typeSport');
+        //     var typesport = select.options[select.selectedIndex];
+
+        //     // document.getElementById('value').value = option.value;
+        //     // document.getElementById('text').value = option.text;
+        // }
+
+        // function updateChose() {
+        //     var select = document.getElementById('choseTeam');
+        //     var choseteam = select.options[select.selectedIndex];
+
+        //     // document.getElementById('value').value = option.value;
+        //     // document.getElementById('text').value = option.text;
+        // }
+
+        // function updateStadium() {
+        //     var select = document.getElementById('choseStadium');
+        //     var chosestadium = select.options[select.selectedIndex];
+
+        //     // document.getElementById('value').value = option.value;
+        //     // document.getElementById('text').value = option.text;
+        // }
+
+        // updateType();
+        // updateChose();
+        // updateStadium();
+
+
+        function add() {
+
+            // const button = document.querySelector('#btnSubmit');
+            // button.addEventListener('click', (event) => {
+            //     let checkboxes = document.querySelectorAll('input[name="datePlay"]:checked');
+            //     let selectDate = [];
+            //     checkboxes.forEach((checkbox) => {
+            //         selectDate.push(checkbox.value);
+            //     });
+            //     document.write("You have selected ", selectDate);
+            // });
+
+            // var mon = document.getElementById("monday");
+            // var tue = document.getElementById("tuesday");
+            // var wed = document.getElementById("wednesday");
+            // var thu = document.getElementById("thursday");
+            // var fri = document.getElementById("friday");
+            // var sat = document.getElementById("saturday");
+            // var sun = document.getElementById("sunday");
+            // var result = " ";
+            // if (mon.checked == true  tue.checked == true  wed.checked == true  thu.checked == true  fri.checked == true  sat.checked == true  sun.checked == true) {
+            //     var Monday = document.getElementById("monday").value;
+            //     // result = lg1 + " ";
+            // }
+            // else if (tue.checked == true) {
+            //     var Tuesday = document.getElementById("tuesday").value;
+            //     // result = result + lg2 + " ";
+            // }
+            // else if (wed.checked == true) {
+            //     document.write(result);
+            //     var Wednesday = document.getElementById("wednesday").value;
+            //     // result = result + lg3;
+            // }
+            // else if (thu.checked == true) {
+            //     document.write(result);
+            //     var Thursday = document.getElementById("thursday").value;
+            //     // result = result + lg3;
+            // }
+            // else if (fri.checked == true) {
+            //     document.write(result);
+            //     var Friday = document.getElementById("friday").value;
+            //     // result = result + lg3;
+            // }
+            // else if (sat.checked == true) {
+            //     document.write(result);
+            //     var Saturday = document.getElementById("saturday").value;
+            //     // result = result + lg3;
+            // }
+            // else if (sun.checked == true) {
+            //     document.write(result);
+            //     var Sunday = document.getElementById("sunday").value;
+            //     // result = result + lg3;
+            // }
+            // else {
+            //     return "Select any one";
+            // }
+            // return document.getElementById("result").innerHTML = "You have selected " + result + " language";
+
+
+
+            var select = document.getElementById('typeSport');
+            var typesport = select.options[select.selectedIndex].text;
+
+            // let typesport = document.forms["sportForm"]["typeSport"].value;
+            if (typesport == "") {
+                alert("Name and typesport must be filled out");
+                return false;
+            }
+
+            var select = document.getElementById('choseTeam');
+            var choseteam = select.options[select.selectedIndex].text;
+
+            // let choseteam = document.forms["teamForm"]["choseTeam"].value;
+            if (!choseteam) {
+                // alert("Name and choseteam must be filled out");
+                return false;
+            }
+
+
+            var ch_date = "";
+            $.each($("input[name='datePlay']:checked"), function () {
+                ch_date += ", " + $(this).val();
+            });
+            if (ch_date) {
+                ch_date = ch_date.substring(1);
+
+            } else {
+                // alert('Please choose any date ');
+                return false;
+            }
+
+
+            var select = document.getElementById('choseStadium');
+            var chosestadium = select.options[select.selectedIndex].text;
+
+            // let chosestadium = document.forms["stadiumForm"]["choseStadium"].value;
+            if (!chosestadium) {
+                // alert("Name and chosestadium must be filled out");
+                return false;
+            }
+            // updateType();
+            // updateChose();
+            // updateStadium();
+
+            // var typeSport = Number(document.getElementById("typeSport").value);
+            // var choseTeam = Number(document.getElementById("choseTeam").value);
+            // var monday = Number(document.getElementById("monday").value);
+            // var tuesday = Number(document.getElementById("tuesday").value);
+            // var wednesday = Number(document.getElementById("wednesday").value);
+            // var thursday = Number(document.getElementById("thursday").value);
+            // var friday = Number(document.getElementById("friday").value);
+            // var saturday = Number(document.getElementById("saturday").value);
+            // var sunday = Number(document.getElementById("sunday").value);
+            // var choseStadium = Number(document.getElementById("choseStadium").value);
+
+            // if (salary != "" && overtime != "" && average != "" && !isNaN(salary) && !isNaN(overtime) && !isNaN(average)) {
+            //     var result = ((salary / workday) * overtime * average / timeday) / 100;
+
+            // telegramAlert(typesport, choseteam, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, chosestadium);
+            telegramAlert(typesport, choseteam, ch_date, chosestadium);
+
+            // alert(" ប្រាក់ឈ្លួលបន្ថែមម៉ោងរបស់លោកអ្នកគឺ : " + result + " Dollar ");
+
+            // }
+        }
+
+        const token = '5911609169:AAE0Rfgky5fapvK5IMcpKTarFKrWnUOyjyI';
+        const chatId = '5016218982';
+
+        // $.ajaxSetup({
+        //     headers: {
+        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        //     }
+        // });
+
+        function telegramAlert(typesport, choseteam, ch_date, chosestadium) {
+            var list = `<b>\n- ប្រភេទកីឡា : <b>${typesport} </b>\n- ប៉ះក្រុម : </b>${choseteam} <b>\n- ថ្ងៃ : </b>${ch_date} <b>\n- ទីលាន : </b>${chosestadium}\n`;
+            $.ajax({
+                type: 'POST',
+                url: `https://api.telegram.org/bot${token}/sendMessage`,
+                data: {
+                    chat_id: chatId,
+                    text: list,
+                    parse_mode: 'html',
+                },
+            });
+        }
+    </script>
+</body>
+
+</html>
