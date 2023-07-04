@@ -106,107 +106,7 @@
 
     <script>
 
-        // const button = document.querySelector('#btnSubmit');
-        // button.addEventListener('click', (event) => {
-        //     let checkboxes = document.querySelectorAll('input[name="datePlay"]:checked');
-        //     let selectDate = [];
-        //     checkboxes.forEach((checkbox) => {
-        //         selectDate.push(checkbox.value);
-        //     });
-        //     // document.write("You have selected ", output);
-        // });
-
-
-
-
-        // function updateType() {
-        //     var select = document.getElementById('typeSport');
-        //     var typesport = select.options[select.selectedIndex];
-
-        //     // document.getElementById('value').value = option.value;
-        //     // document.getElementById('text').value = option.text;
-        // }
-
-        // function updateChose() {
-        //     var select = document.getElementById('choseTeam');
-        //     var choseteam = select.options[select.selectedIndex];
-
-        //     // document.getElementById('value').value = option.value;
-        //     // document.getElementById('text').value = option.text;
-        // }
-
-        // function updateStadium() {
-        //     var select = document.getElementById('choseStadium');
-        //     var chosestadium = select.options[select.selectedIndex];
-
-        //     // document.getElementById('value').value = option.value;
-        //     // document.getElementById('text').value = option.text;
-        // }
-
-        // updateType();
-        // updateChose();
-        // updateStadium();
-
-
         function add() {
-
-            // const button = document.querySelector('#btnSubmit');
-            // button.addEventListener('click', (event) => {
-            //     let checkboxes = document.querySelectorAll('input[name="datePlay"]:checked');
-            //     let selectDate = [];
-            //     checkboxes.forEach((checkbox) => {
-            //         selectDate.push(checkbox.value);
-            //     });
-            //     document.write("You have selected ", selectDate);
-            // });
-
-            // var mon = document.getElementById("monday");
-            // var tue = document.getElementById("tuesday");
-            // var wed = document.getElementById("wednesday");
-            // var thu = document.getElementById("thursday");
-            // var fri = document.getElementById("friday");
-            // var sat = document.getElementById("saturday");
-            // var sun = document.getElementById("sunday");
-            // var result = " ";
-            // if (mon.checked == true  tue.checked == true  wed.checked == true  thu.checked == true  fri.checked == true  sat.checked == true  sun.checked == true) {
-            //     var Monday = document.getElementById("monday").value;
-            //     // result = lg1 + " ";
-            // }
-            // else if (tue.checked == true) {
-            //     var Tuesday = document.getElementById("tuesday").value;
-            //     // result = result + lg2 + " ";
-            // }
-            // else if (wed.checked == true) {
-            //     document.write(result);
-            //     var Wednesday = document.getElementById("wednesday").value;
-            //     // result = result + lg3;
-            // }
-            // else if (thu.checked == true) {
-            //     document.write(result);
-            //     var Thursday = document.getElementById("thursday").value;
-            //     // result = result + lg3;
-            // }
-            // else if (fri.checked == true) {
-            //     document.write(result);
-            //     var Friday = document.getElementById("friday").value;
-            //     // result = result + lg3;
-            // }
-            // else if (sat.checked == true) {
-            //     document.write(result);
-            //     var Saturday = document.getElementById("saturday").value;
-            //     // result = result + lg3;
-            // }
-            // else if (sun.checked == true) {
-            //     document.write(result);
-            //     var Sunday = document.getElementById("sunday").value;
-            //     // result = result + lg3;
-            // }
-            // else {
-            //     return "Select any one";
-            // }
-            // return document.getElementById("result").innerHTML = "You have selected " + result + " language";
-
-
 
             var select = document.getElementById('typeSport');
             var typesport = select.options[select.selectedIndex].text;
@@ -248,40 +148,12 @@
                 // alert("Name and chosestadium must be filled out");
                 return false;
             }
-            // updateType();
-            // updateChose();
-            // updateStadium();
-
-            // var typeSport = Number(document.getElementById("typeSport").value);
-            // var choseTeam = Number(document.getElementById("choseTeam").value);
-            // var monday = Number(document.getElementById("monday").value);
-            // var tuesday = Number(document.getElementById("tuesday").value);
-            // var wednesday = Number(document.getElementById("wednesday").value);
-            // var thursday = Number(document.getElementById("thursday").value);
-            // var friday = Number(document.getElementById("friday").value);
-            // var saturday = Number(document.getElementById("saturday").value);
-            // var sunday = Number(document.getElementById("sunday").value);
-            // var choseStadium = Number(document.getElementById("choseStadium").value);
-
-            // if (salary != "" && overtime != "" && average != "" && !isNaN(salary) && !isNaN(overtime) && !isNaN(average)) {
-            //     var result = ((salary / workday) * overtime * average / timeday) / 100;
-
             // telegramAlert(typesport, choseteam, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, chosestadium);
             telegramAlert(typesport, choseteam, ch_date, chosestadium);
-
-            // alert(" ប្រាក់ឈ្លួលបន្ថែមម៉ោងរបស់លោកអ្នកគឺ : " + result + " Dollar ");
-
-            // }
         }
 
         const token = '5911609169:AAE0Rfgky5fapvK5IMcpKTarFKrWnUOyjyI';
         const chatId = '5016218982';
-
-        // $.ajaxSetup({
-        //     headers: {
-        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        //     }
-        // });
 
         function telegramAlert(typesport, choseteam, ch_date, chosestadium) {
             var list = `<b>\n- ប្រភេទកីឡា : <b>${typesport} </b>\n- ប៉ះក្រុម : </b>${choseteam} <b>\n- ថ្ងៃ : </b>${ch_date} <b>\n- ទីលាន : </b>${chosestadium}\n`;
