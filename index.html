@@ -17,7 +17,7 @@
         <div class="row">
             <label id="successmessage" class="text-success"></label>
             <!-- <form> -->
-            <div class="col-12 col-md-6 col-sm-6">
+            <div class="col-12 col-md-6 col-sm-6 cform">
                 <h2 class="text-center text-success" style="text-transform: uppercase;">please vote for available
                     match
                 </h2>
@@ -168,6 +168,7 @@
                 success: function(data) {
                     successmessage = 'Your voted was succesfully ';
                      $("#successmessage").text(successmessage);
+                    $("#cform")[0].reset();
                 },
                 error: function(data) {             
                     successmessage = 'Error';
