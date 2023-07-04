@@ -169,7 +169,7 @@
                 success: function(data) {
                     successmessage = 'Your voted was succesfully ';
                      $("#successmessage").text(successmessage);
-                   window.location.reload();
+                   window.history.back();
                 },
                 error: function(data) {             
                     successmessage = 'Error';
